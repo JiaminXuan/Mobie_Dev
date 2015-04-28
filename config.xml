@@ -1,23 +1,11 @@
-    <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns = "http://www.w3.org/ns/widgets"
-
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.achieveapp"
-        version     = "1.0.0"
-        versionCode = "10" >
-
-        <!-- versionCode is optional and Android only -->
-
-        <preference name="phonegap-version" value="3.5.0" />
-
-        <name>Sample Config.xml</name>
-
-        <description>
-        An example for phonegap build docs. 
-        </description>
-
-        <author href="http://yoursite.com" email="you@youremail.com">
-        Your Name
-        </author>
-
-    </widget>
+<widget id="com.achieveapp.hello" version="0.0.1">
+	<name>AchieveApp</name>
+	<description>
+		This is achieve_app.
+	</description>
+	<author email="lck268@stern.nyu.edu" href="http://www.nyu.edu">
+		App Team 2
+	</author>
+	<content src="index.html"/>
+	<access origin="*" />
+</widget>
