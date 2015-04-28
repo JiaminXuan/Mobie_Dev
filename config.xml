@@ -1,6 +1,6 @@
 <widget id="com.achieveapp.hello" version="0.0.1">
 
-	<preference name="phonegap-version" value="3.5.0" />
+	<preference name="phonegap-version" value="3.7.0" />
 
 	<name>AchieveApp</name>
 	<description>
