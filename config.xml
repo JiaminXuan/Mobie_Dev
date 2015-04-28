@@ -1,0 +1,14 @@
+<widget id="com.achieveapp.hello" version="0.0.1">
+
+	<preference name="phonegap-version" value="3.7.0" />
+
+	<name>AchieveApp</name>
+	<description>
+		This is achieve_app.
+	</description>
+	<author email="lck268@stern.nyu.edu" href="http://www.nyu.edu">
+		App Team 2
+	</author>
+	<content src="index.html"/>
+	<access origin="*" />
+</widget>
