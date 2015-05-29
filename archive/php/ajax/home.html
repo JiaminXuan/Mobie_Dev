@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>home</title>
+  <style>
+  button{
+      margin: 5px 0;
+      padding: 15px;
+      width: 100%;
+      *width: 518px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; 
+    }
+
+    body { 
+      background: #eee; 
+    }
+    #mypro{
+      margin: 5px 0;
+      padding: 15px;
+      width: 100%;
+      *width: 518px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; 
+      font-family: verdana; 
+   font-size: 25px; 
+   font-weight: bold; 
+   font-style: italic; 
+   background: #ffffcc;
+   color: green; 
+   line-height: 18px;
+    }
+
+    /*------------------------------*/
+
+    #signup {
+      width: 550px;
+      height: 330px;
+      margin: 100px auto 50px auto;
+      padding: 20px;
+      position: relative;
+      background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAMAAAB883U1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF7+/v7u7u////REBVnAAAAAN0Uk5T//8A18oNQQAAABZJREFUeNpiYGJiYmBiYgRiBhAGCDAAALsAFJhiJ+UAAAAASUVORK5CYII=);
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px; 
+      border-radius: 3px;  
+    }
+
+    #signup::before, 
+    #signup::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 2px;
+      right: 2px;
+      top: 0;
+      z-index: -1;
+      background: #fff;
+      border: 1px solid #ccc;     
+    }
+
+    #signup::after {
+      left: 4px;
+      right: 4px;
+      bottom: -5px;
+      z-index: -2;
+      -moz-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+      -webkit-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+      box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+    }
+
+    /*------------------------------*/
+
+    #signup h1 {
+      position: relative;
+      font: italic 1em/3.5em 'trebuchet MS',Arial, Helvetica;
+      color: #999;
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    #signup h1::before,
+    #signup h1::after{
+      content:'';
+      position: absolute;
+      border: 1px solid rgba(0,0,0,.15);
+      top: 10px;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+    }
+    
+    
+    #signup h1::after{
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+    }
+
+    /*------------------------------*/
+
+        ::-webkit-input-placeholder {
+           color: #bbb;
+        }
+        
+        :-moz-placeholder {
+           color: #bbb;
+        }               
+
+    .placeholder{
+      color: #bbb; /* polyfill */
+    }   
+
+    #signup input{
+      margin: 5px 0;
+      padding: 15px;
+      width: 100%;
+      *width: 518px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; 
+    }
+
+    #signup input:focus{
+      outline: 0;
+      border-color: #aaa;
+      -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+      -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+    }   
+
+    #signup button{
+      margin: 20px 0 0 0;
+      padding: 15px 8px;      
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #2493FF;
+      overflow: visible;
+      display: inline-block;
+      color: #fff;
+      font: bold 1.4em arial, helvetica;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.4);     
+      background-color: #2493ff;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+      background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      -webkit-transition: background-color .2s ease-out;
+      -moz-transition: background-color .2s ease-out;
+      -ms-transition: background-color .2s ease-out; 
+      -o-transition: background-color .2s ease-out;  
+      transition: background-color .2s ease-out;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -moz-box-shadow:  0 2px 1px rgba(0, 0, 0, .3),
+                0 1px 0 rgba(255, 255, 255, .5) inset;
+      -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+                0 1px 0 rgba(255, 255, 255, .5) inset;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+            0 1px 0 rgba(255, 255, 255, .5) inset;                      
+    }
+
+    #signup button:hover{
+        background-color: #7cbfff;
+            border-color: #7cbfff;
+    }
+
+    #signup button:active{
+      position: relative;
+      top: 3px;
+      text-shadow: none;
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+    }
+
+    /* ------------------------------------------------- */
+
+    #about{
+        color: #999;
+        text-align: center;
+        font: 0.9em Arial, Helvetica;
+    }
+
+    #about a{
+        color: #777;
+    }   
+  </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="cookie.js"></script>
+<script type = "text/javascript" src="countdown3.js"></script>
+<script type="text/javascript">
+$("document").ready(
+	 function()
+   {
+      if($("#timer")[0].value == "0:0:00")
+        alert("you success");
+   }
+
+);
+
+
+function logout()
+{
+	deleteCookie("u_name");
+  deleteCookie("Email");
+	document.write("you are logout in 3 seconds");
+	window.setTimeout(function () {
+        location.href = "index.html";}, 3000);
+}
+
+function goal_start()
+{
+
+}
+
+function myprofile()
+{
+  
+  document.write("you are going in 3 seconds");
+  window.setTimeout(function () {
+        location.href = "myprofile.html";}, 3000);
+}
+
+
+</script>
+
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en-GB'}
+</script>
+
+
+</head>
+
+
+
+
+
+
+<br>
+
+<button id ="mypro" onclick="myprofile()">my profile</button>
+<body onload="onLoad()";>
+<select id="hour" placeholder="hour">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option> :
+</select> <select id="minute" placeholder="minute">
+  <option value="00">00</option>
+  <option value="30">30</option>
+  <option value="60">60</option>
+</select> <select id="secs" placeholder="second">
+  <option value="00">00</option>
+</select>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="R98J5UDCW5NLC">
+<table>
+<tr><td><input type="hidden" name="on0" value="Wager Amount">Wager Amount</td></tr><tr><td><select name="os0">
+  <option value="Small Tomatoes">Small Tomatoes $1.00 USD</option>
+  <option value="Medium Tomatoes">Medium Tomatoes $2.00 USD</option>
+  <option value="Big Tomatoes">Big Tomatoes $4.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+<input type="text" id="timer" >
+<button id="btn" disabled="true" onClick="start()">Start</button>
+</body>
+<button id = "logout" onclick = "logout()">logout</button>
+<br>
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-annotation="inline" data-width="600"></div>
+<a href="https://twitter.com/intent/tweet?button_hashtag=Timeowner&text=I%20have%20already%20study%20for%2025%20min%20without%20distract%20by%20the%20phone" class="twitter-hashtag-button" data-size="large" data-url="http://websys3.stern.nyu.edu/~rm3827/websys/ajaxcopy/">Tweet #Timeowner</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-share-button" align="center" data-href="home.html" data-layout="button"></div>
+</html>
+
+
+
+
+
+
+
+

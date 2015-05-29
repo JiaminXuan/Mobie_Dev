@@ -1,0 +1,78 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="js/brain.js"></script>
+
+  <title>minty's pomodoro</title>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3878711-8']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</head>
+
+<body>
+
+<div class="dummy"></div>
+
+  <div class="container"> <!-- container -->
+
+    <img src="img/pomodoro.png">
+
+    <div class="hero-unit">  <!-- hero-unit -->
+
+      <hgroup>
+        <h1 id="m">25</h1><h2>m </h2>
+        <h1 id="s">00</h1><h2>s </h2>
+        <h1 id="ms">000</h1><h2>ms</h2>
+      </hgroup>  
+        
+      <p>
+        <a id="pomodoro25" class="btn  large">Pomo 25 minutes</a>
+        <a id="stop" class="btn  large" >Give up</a>
+      </p>
+
+      <div id="info" class="alert-message"><b>Heads</b> up! Your timer stopped!</div>
+
+      <div id="log" class="alert-message"><h3>Log:</h3>
+        <ul>
+
+        </ul>
+      </div>
+
+    </div><!-- hero-unit -->
+
+    
+      <div class="span-one-third"><h3>How can I start?</h3>
+      <ol>
+        <li>Choose a task to be accomplished</li>
+        <li>Work on the task until the Pomodoro rings</li>
+        <li>Take a short break (5 minutes)</li>
+      </ol>
+      
+      Created by Web Dev Team 2
+      </div>
+    </div>
+
+    <footer>
+    </footer>
+  </div> <!-- container -->
+  
+</body>
+</html>

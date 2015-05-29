@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pause Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.9.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.addEventListener("pause", onPause, false);
+    }
+    // Handle the pause event
+    //
+    function onBackKeyDown()() {
+    	alert("GO BACK!");
+        #charge money
+        navigator.notification.alert(
+            'Get back to work you loser',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+    ｝
+    </script>
+  </head>
+  <body onload="onLoad()">
+  <p>push test</p>
+  </body>
+</html>

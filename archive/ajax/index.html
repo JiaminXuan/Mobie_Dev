@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>123</title>
+  <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+<!--Put the following in the <head>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="cookie.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+  var bigflag;
+  // deleteCookie("u_name");
+	// if($.cookie)
+  if(getCookie("u_name") != "")
+  {
+     window.location.assign("home.html");
+  }
+  $(".js-ajax-php-json").submit(function(){
+    
+    data = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "http://websys3.stern.nyu.edu/~rm3827/websys/ajax/login.php", //Relative or absolute path to response.php file
+      data: data,
+      success: function(data) {
+        bigflag = 0;
+        $(".the-return").html(
+          // "Favorite beverage: " + data["u_name"] + "<br />Favorite restaurant: " + data["password"] + "<br />Gender: "  + data["json"]
+          "good"+data["message"]+data.flag+data.u_id+data.u_name
+                  );
+        
+        if(data.flag == "0")
+        {
+        	$("#result").html("haha");
+        }
+        else if (data.flag == "1")
+        {
+          setCookie("u_name",data.u_name);
+          setCookie("Email",data.Email);
+          setCookie("u_id",data.u_id);
+          $("#result").html("login sucuss in javascript");
+           window.location.assign("home.html");
+          
+        }
+        // $(".js-ajax-php-json").hide();
+
+        // alert("Form submitted successfully.\nReturned json: " + data["json"]);
+      }
+    });
+      return false;//tell the browser not to submit the form.
+  });
+});
+</script>
+</head>
+<body>
+<div class="login-card">
+<!--Put the following in the <body>-->
+<form action = "http://websys3.stern.nyu.edu/~rm3827/websys/ajax/login.php" class="js-ajax-php-json" method="post" accept-charset="utf-8">
+  <input type="text" name="u_name" value="" placeholder="your username" />
+  <input type="text" name="password" value="" placeholder="password" />
+  <input  class ="login-submit" type="submit" name="submit" value="login"  />
+</form>
+<div class="login-help">
+<a href = "register.html"> register </a>
+</div>
+
+</div>
+
+
+<div class="the-return" align= "center">
+  [HTML is replaced when successful.]
+</div>
+<div id = "result" align="center">
+result is placed here.
+</div>
+
+</body>
+</html>

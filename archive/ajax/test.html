@@ -1,0 +1,24 @@
+
+<html>  
+<head>  
+<script src="http://code.jquery.com/jquery-latest.js"></script>  
+<script src="jquery.cookie.js"></script>  
+<script src="cookie.js"></script> 
+<script>  
+$(document).ready(function(){  
+    // set cookie  
+    
+ 
+setCookie('test', '5');  
+alert(getCookie('test')); 
+deleteCookie('test'); 
+$(".setme").html(getCookie('test'));
+});  
+</script>  
+</head>  
+<body>  
+<a class="setme">Set Me</a>  
+<a class="tellme">Tell Me</a>  
+<a class="delete">DeleteM</a>  
+</body>  
+</html>  

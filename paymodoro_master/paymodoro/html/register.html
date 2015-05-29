@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>123</title>
+    <style>
+
+    body { 
+      background: #eee; 
+    }
+
+    /*------------------------------*/
+
+    #signup {
+      width: 550px;
+      height: 330px;
+      margin: 100px auto 50px auto;
+      padding: 20px;
+      position: relative;
+      background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAMAAAB883U1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF7+/v7u7u////REBVnAAAAAN0Uk5T//8A18oNQQAAABZJREFUeNpiYGJiYmBiYgRiBhAGCDAAALsAFJhiJ+UAAAAASUVORK5CYII=);
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px; 
+      border-radius: 3px;  
+    }
+
+    #signup::before, 
+    #signup::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 2px;
+      right: 2px;
+      top: 0;
+      z-index: -1;
+      background: #fff;
+      border: 1px solid #ccc;     
+    }
+
+    #signup::after {
+      left: 4px;
+      right: 4px;
+      bottom: -5px;
+      z-index: -2;
+      -moz-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+      -webkit-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+      box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+    }
+
+    /*------------------------------*/
+
+    #signup h1 {
+      position: relative;
+      font: italic 1em/3.5em 'trebuchet MS',Arial, Helvetica;
+      color: #999;
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    #signup h1::before,
+    #signup h1::after{
+      content:'';
+      position: absolute;
+      border: 1px solid rgba(0,0,0,.15);
+      top: 10px;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+    }
+
+    #signup h1::after{
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+    }
+
+    /*------------------------------*/
+
+        ::-webkit-input-placeholder {
+           color: #bbb;
+        }
+        
+        :-moz-placeholder {
+           color: #bbb;
+        }               
+
+    .placeholder{
+      color: #bbb; /* polyfill */
+    }   
+
+    #signup input{
+      margin: 5px 0;
+      padding: 15px;
+      width: 100%;
+      *width: 518px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; 
+    }
+
+    #signup input:focus{
+      outline: 0;
+      border-color: #aaa;
+      -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+      -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+    }   
+
+    #signup button{
+      margin: 20px 0 0 0;
+      padding: 15px 8px;      
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #2493FF;
+      overflow: visible;
+      display: inline-block;
+      color: #fff;
+      font: bold 1.4em arial, helvetica;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.4);     
+      background-color: #2493ff;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+      background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+      -webkit-transition: background-color .2s ease-out;
+      -moz-transition: background-color .2s ease-out;
+      -ms-transition: background-color .2s ease-out; 
+      -o-transition: background-color .2s ease-out;  
+      transition: background-color .2s ease-out;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -moz-box-shadow:  0 2px 1px rgba(0, 0, 0, .3),
+                0 1px 0 rgba(255, 255, 255, .5) inset;
+      -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+                0 1px 0 rgba(255, 255, 255, .5) inset;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+            0 1px 0 rgba(255, 255, 255, .5) inset;                      
+    }
+
+    #signup button:hover{
+        background-color: #7cbfff;
+            border-color: #7cbfff;
+    }
+
+    #signup button:active{
+      position: relative;
+      top: 3px;
+      text-shadow: none;
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+    }
+
+    /* ------------------------------------------------- */
+
+    #about{
+        color: #999;
+        text-align: center;
+        font: 0.9em Arial, Helvetica;
+    }
+
+    #about a{
+        color: #777;
+    }   
+  </style>
+<!--Put the following in the <head>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script src="cookie.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+  
+  $(".js-ajax-php-json").submit(function(){
+    
+    data = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "http://websys3.stern.nyu.edu/websysS15GB/websysS15GB2/public_html/websys/paymodoro_master/php/register.php", //Relative or absolute path to response.php file
+      data: data,
+      success: function(data) {
+        
+        $(".the-return").html(
+          // "Favorite beverage: " + data["u_name"] + "<br />Favorite restaurant: " + data["password"] + "<br />Gender: "  + data["json"]
+          data["message"]
+                  );
+        
+        if(data.flag == "0")
+        {
+        	$("#result").html("Your registration failed.  Please try again.");
+        	
+        }
+        else if (data.flag == "1")
+        {
+        	window.setTimeout(function () {
+        location.href = "index.html";}, 5000);
+          
+        }
+        // $(".js-ajax-php-json").hide();
+
+        // alert("Form submitted successfully.\nReturned json: " + data["json"]);
+      }
+    });
+     return false;//tell the browser not to submit the form.
+  });
+});
+</script>
+
+
+<!-- start of bootstrap styling -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      	<link href="app_styles.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- end of bootstrap styling -->
+
+<style>
+body {
+    background-color: white;
+}
+</style>
+
+
+<!--start bootstrap recc-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap.css" rel="stylesheet" media="screen">
+        <link href="bootstrap-responsive.css" rel="stylesheet" media="screen">
+<!--end bootstrap recc-->
+
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+<!-- start paymodoro logo-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <img src="paymodoro_logo.png" class="img-responsive">
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+<!-- end paymodoro logo-->
+
+<div class="container">
+<h1>Sign up for Paymodoro!</h1>
+<p>Enter a username, password, and email address below, and hit submit.</p>
+<!--Put the following in the <body>-->
+<form  id = "signup_remove" action = "http://websys3.stern.nyu.edu/websysS15GB/websysS15GB2/public_html/websys/paymodoro_master/php/register.php" class="js-ajax-php-json" method="post" accept-charset="utf-8">
+  <input type="text" name="u_name" value="" placeholder="Username" /><br>
+  <input type="text" name="password" value="" placeholder="Password" /><br>
+  <input type = "email" name = "Email" value = "" placeholder= "Email Address"><br>
+  <input type="submit" name="submit" value="Submit form" />
+</form>
+</div>
+
+<h1>
+	<div class="the-return" align="center">
+	</div>
+	<div id = "result" align="center">
+	</div>
+</h1>
+
+<!-- start tomato logo-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <img src="tomato.png" class="img-responsive">
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+<!-- end tomato logo-->
+
+
+
+</body>
+</html>

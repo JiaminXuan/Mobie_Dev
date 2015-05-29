@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>seperate with the php file</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type = "text/javascript">
+$(document).ready(function(){
+	// document.write("here");
+	$(".good").submit(function(){
+		data = $(this).serialize();
+		// document.write("here1");
+		$.ajax({
+			type:"POST",
+			dataType:"json",
+			url: "return.php",
+			data: data,
+			success: function(data){
+				// document.write(data);
+
+				$(".return1").html(data.u_name+data.password);
+				// document.write("here4");
+			}
+
+		});
+	return false;
+	});
+});
+
+
+</script>
+</head>
+
+
+
+<body>
+<form method = "post" class = "good" action = "return.php" >
+<input type="text" name = "u_name" value="laomiao">
+<input type= "text" name = "password" value = "123456">
+<input type = "submit" name = "submit" value = "submit">
+</form>
+<div class = "return1">
+</div>
+</body>
+</html>
+

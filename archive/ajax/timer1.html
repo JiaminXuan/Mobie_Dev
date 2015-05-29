@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type = "text/javascript" src="countdown3.js"></script>
+<body onload="onLoad()";>
+<select id="hour" placeholder="hour">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option> :
+</select> <select id="minute" placeholder="minute">
+  <option value="00">00</option>
+  <option value="30">30</option>
+  <option value="60">60</option>
+</select> <select id="secs" placeholder="second">
+  <option value="00">00</option>
+</select>
+
+
+<input type="text" id="timer" >
+<button id="btn" onClick="start()">Start</button>
+</body>
+</head>
+</html>

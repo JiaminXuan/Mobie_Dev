@@ -1,0 +1,168 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type = "text/javascript" src= "../js/countdown3.js"></script>
+
+  <title>Paymodoro Cycle Timer</title>
+
+
+<!--start logout function-->
+<script src="cookie.js"></script>
+<script type="text/javascript">
+function logout()
+{
+  deleteCookie("u_name");
+  deleteCookie("Email");
+	document.write("You are being logged out in 3 seconds...");
+	window.setTimeout(function () {
+        location.href = "index.html";}, 3000);
+}
+
+</script>
+<!--end logout function-->
+
+
+<style>
+  button{
+      margin: 5px 0;
+      padding: 15px;
+      width: 100%;
+      *width: 518px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; 
+    }
+</style>
+
+
+<!-- start of bootstrap styling -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      	<link href="app_styles.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- end of bootstrap styling -->
+
+<style>
+body {
+    background-color: white;
+}
+</style>
+
+
+<!--start bootstrap recc-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap.css" rel="stylesheet" media="screen">
+        <link href="bootstrap-responsive.css" rel="stylesheet" media="screen">
+<!--end bootstrap recc-->
+
+
+</head>
+
+
+
+
+
+<body onLoad="onLoad()";>
+
+
+
+<!-- start paymodoro logo-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <img src="paymodoro_logo.png" class="img-responsive">
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+<!-- end paymodoro logo-->
+
+
+
+
+
+
+
+
+
+<div class="container">
+<h1>Set your timer</h1>
+<p>Choose your focus time, from 1 half hour to 3 hours. Each half hour cycle starts with 25 minutes of focus and ends with a 5 minute break.  If you don't touch your phone during the focus periods, you win! Once you win (or give up), logout below.</p>
+<p><i>In this beta version, you can demo a work/break transition or a winning situation.  Leave the hour set to "0" and choose "win demo" or "break demo" from the minutes dropdown.  Wait for one minute to watch the change.</i></p>
+
+
+<h4>
+Hours<select id="hour" placeholder="hour">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option> :
+</select> 
+Minutes<select id="minute" placeholder="minute">
+  <option value="00">00</option>
+  <option value="01">win demo</option>
+  <option value="06">break demo</option>
+  <option value="30">30</option>
+  <option value="60">60</option>
+</select> <br>
+
+
+Countdown Clock:<input type="text" id="timer" >
+</h4>
+</div>
+
+
+
+<button id="btn" onClick="start()">Start Timer!</button>
+
+<br>
+<div class="container">
+	<h1>
+    Your status
+	</h1>
+	<div class="well">
+	<!-- start messages-->
+	<div id="messages">Get ready to Paymodoro!</div>
+	<!-- end messages-->
+	</div>
+</div>
+<br>
+<button id ="logout" onclick = "logout()">Logout</button>
+  
+  
+  
+  
+<!-- start tomato logo-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <img src="tomato.png" class="img-responsive">
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+<!-- end tomato logo-->
+  
+</body>
+</html>
